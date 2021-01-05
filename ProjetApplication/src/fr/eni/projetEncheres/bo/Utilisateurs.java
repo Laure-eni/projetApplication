@@ -3,7 +3,7 @@ package fr.eni.projetEncheres.bo;
 public class Utilisateurs {
 	
 	 
-	private int no_utilisateur;   
+	 private int no_utilisateur;   
 	 private String pseudo;           
 	 private String nom;             
 	 private String prenom;           
@@ -35,6 +35,10 @@ public class Utilisateurs {
 		this.administrateur = administrateur;
 	}
 	 
+	public Utilisateurs() {
+		// TODO Auto-generated constructor stub
+	}
+
 	//Getters and Setters 
 	public int getNo_utilisateur() {
 		return no_utilisateur;

@@ -9,6 +9,6 @@ public class Utils {
 
    public static Connection getConnection() throws SQLException
     {
-        return  DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=BDD_ENCHERES","sa", "Pa$$w0rd");
+        return  DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=BDD_ENCHERES","sa", "m03011996*");
     }
 }
