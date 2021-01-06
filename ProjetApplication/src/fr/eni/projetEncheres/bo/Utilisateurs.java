@@ -1,27 +1,25 @@
 package fr.eni.projetEncheres.bo;
 
 public class Utilisateurs {
-	
-	 
-	 private int no_utilisateur;   
+
+	private int no_utilisateur;   
 	 private String pseudo;           
 	 private String nom;             
 	 private String prenom;           
 	 private String  email;            
 	 private String telephone;        
 	 private String  rue;             
-	 private int code_postal;      
+	 private String code_postal;      
 	 private String ville;            
 	 private String mot_de_passe;     
-	 private int credit;           
+	 private int credit=50;           
 	 private int administrateur;
-	 
-	 
+
 	 //Constructeur
-	 public Utilisateurs(int no_utilisateur, String pseudo, String nom, String prenom, String email, String telephone,
-			String rue, int code_postal, String ville, String mot_de_passe, int credit, int administrateur) {
+	 public Utilisateurs(String pseudo, String nom, String prenom, String email, String telephone,
+			String rue, String code_postal, String ville, String mot_de_passe, int credit, int administrateur) {
 		super();
-		this.no_utilisateur = no_utilisateur;
+		
 		this.pseudo = pseudo;
 		this.nom = nom;
 		this.prenom = prenom;
@@ -35,8 +33,7 @@ public class Utilisateurs {
 		this.administrateur = administrateur;
 	}
 	 
-	public Utilisateurs() {
-		// TODO Auto-generated constructor stub
+	 public Utilisateurs() {
 	}
 
 	//Getters and Setters 
@@ -82,10 +79,10 @@ public class Utilisateurs {
 	public void setRue(String rue) {
 		this.rue = rue;
 	}
-	public int getCode_postal() {
+	public String getCode_postal() {
 		return code_postal;
 	}
-	public void setCode_postal(int code_postal) {
+	public void setCode_postal(String code_postal) {
 		this.code_postal = code_postal;
 	}
 	public String getVille() {
