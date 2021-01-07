@@ -25,10 +25,10 @@ public class Articles_vendusdal {
 
 	Date date = Date.valueOf(LocalDate.now());
 	
-	private static final String INSERT = "INSERT INTO ARTICLES_VENDUS(nom_article, description, date_debut_encheres, date_fin_encheres, prix_initial, prix_vente, no_vendeur,no_categorie,no_retrait) VALUES (?,?,?,?,?,?,?,?,?)";
+	private static final String INSERT = "INSERT INTO ARTICLES_VENDUS(nom_article, description, date_debut_encheres, date_fin_encheres, prix_initial, prix_vente, no_vendeur,no_categorie) VALUES (?,?,?,?,?,?,?,?)";
     private static final String GET_BY_NO_ARTICLE = "SELECT * FROM ARTICLES_VENDUS WHERE no_article = ?";
     private static final String GET_ALL = "SELECT * FROM ARTICLES_VENDUS";
-    private static final String UPDATE = "UPDATE ARTICLES_VENDUS SET nom_article = ?, description = ?, date_debut_encheres = ?, dete_fin_encheres = ?, prix_initial = ?, prix_vente = ?, no_vendeur = ?, no_categorie = ?, no_retrait = ? WHERE no_article = ?";
+    private static final String UPDATE = "UPDATE ARTICLES_VENDUS SET nom_article = ?, description = ?, date_debut_encheres = ?, dete_fin_encheres = ?, prix_initial = ?, prix_vente = ?, no_vendeur = ?, no_categorie = ? WHERE no_article = ?";
     private static final String DELETE = "DELETE ARTICLE_VENDU WHERE no_article = ?";
 
     private static Logger logger = MonLogger.getLogger("ProjetApplication");
@@ -49,7 +49,6 @@ public class Articles_vendusdal {
     		rqt.setInt(6, article_vendu.getPrix_vente());
     		rqt.setInt(7, article_vendu.getNo_utilisateur());//no_vendeur
     		rqt.setInt(8, article_vendu.getNo_categorie());
-    		rqt.setInt(9, article_vendu.getNo_retrait());
     		
     		rqt.executeUpdate();
     		
@@ -78,9 +77,9 @@ public class Articles_vendusdal {
     			result.setDate_fin_encheres(rs.getDate("date de fin echeres"));
     			result.setPrix_initial(rs.getInt("Prix initial de l'article"));
     			result.setPrix_vente(rs.getInt("prix de vente de l'article"));
-    			result.setNo_utilisateur(rs.getInt("numéro du vendeur"));//no_vendeur
+    			result.setNo_utilisateur(rs.getInt("numï¿½ro du vendeur"));//no_vendeur
     			result.setNo_categorie(rs.getInt("categorie de l'article"));
-    			result.setNo_retrait(rs.getInt("Numero du retrait"));
+   
     			
     		}
     	} catch (SQLException e) {
@@ -123,7 +122,6 @@ public class Articles_vendusdal {
  		rqt.setInt(6, article_vendu.getPrix_vente());
  		rqt.setInt(7, article_vendu.getNo_utilisateur());//no_vendeur
  		rqt.setInt(8, article_vendu.getNo_categorie());
- 		rqt.setInt(9, article_vendu.getNo_retrait());
  		
  		
  		

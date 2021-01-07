@@ -1,6 +1,7 @@
 package fr.eni.projetEncheres.bo;
 
 import java.time.LocalDate;
+import java.sql.Date;
 
 
 public class Articles_vendus {
@@ -8,18 +9,18 @@ public class Articles_vendus {
 	private int no_article;                 
     private String nom_article;                   
     private String description;                  
-	private LocalDate date_debut_encheres;          
-    private LocalDate date_fin_encheres;             
+	private Date date_debut_encheres;          
+    private Date date_fin_encheres;             
     private int  prix_initial;                
     private int prix_vente;                   
     private int no_vendeur;               
-    private int no_categorie;                 
-    private int no_retrait;		
+    private int no_categorie;  
+	
 
     //Constructeur
-    public Articles_vendus( String nom_article, String description, LocalDate date_debut_encheres,
-			LocalDate date_fin_encheres, int prix_initial, int prix_vente, int no_vendeur, int no_categorie,
-			int no_retrait) 
+    public Articles_vendus( String nom_article, String description, Date date_debut_encheres,
+    		Date date_fin_encheres, int prix_initial, int prix_vente, int no_vendeur, int no_categorie
+			) 
     {
 		super();
 		
@@ -31,7 +32,6 @@ public class Articles_vendus {
 		this.prix_vente = prix_vente;
 		this.no_vendeur = no_vendeur;
 		this.no_categorie = no_categorie;
-		this.no_retrait = no_retrait;
 	}
     public Articles_vendus() {
 		super();
@@ -50,16 +50,16 @@ public class Articles_vendus {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public LocalDate getDate_debut_encheres() {
+	public Date getDate_debut_encheres() {
 		return date_debut_encheres;
 	}
-	public void setDate_debut_encheres(LocalDate date_debut_encheres) {
+	public void setDate_debut_encheres(Date date_debut_encheres) {
 		this.date_debut_encheres = date_debut_encheres;
 	}
-	public LocalDate getDate_fin_encheres() {
+	public Date getDate_fin_encheres() {
 		return date_fin_encheres;
 	}
-	public void setDate_fin_encheres(LocalDate date_fin_encheres) {
+	public void setDate_fin_encheres(Date date_fin_encheres) {
 		this.date_fin_encheres = date_fin_encheres;
 	}
 	public int getPrix_initial() {
@@ -86,12 +86,7 @@ public class Articles_vendus {
 	public void setNo_categorie(int no_categorie) {
 		this.no_categorie = no_categorie;
 	}
-	public int getNo_retrait() {
-		return no_retrait;
-	}
-	public void setNo_retrait(int no_retrait) {
-		this.no_retrait = no_retrait;
-	}
+
 
 	//methode toString
 	@Override
@@ -99,7 +94,7 @@ public class Articles_vendus {
 		return "Articles_vendus [no_article=" + no_article + ", nom_article=" + nom_article + ", description="
 				+ description + ", date_debut_encheres=" + date_debut_encheres + ", date_fin_encheres="
 				+ date_fin_encheres + ", prix_initial=" + prix_initial + ", prix_vente=" + prix_vente
-				+ ", no_utilisateur=" + no_vendeur + ", no_categorie=" + no_categorie + ", no_retrait=" + no_retrait
+				+ ", no_utilisateur=" + no_vendeur + ", no_categorie=" + no_categorie 
 				+ "]";
 	}
     
