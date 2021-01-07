@@ -15,7 +15,7 @@ import utils.MonLogger;
 
 public class CategoriesDal {
 
-	private static final String INSERT = "INSERT INTO CATEGORIES ( VALUES (?)";
+	private static final String INSERT = "INSERT INTO CATEGORIES VALUES (?)";
 	private static final String GET_BY_ID = "SELECT * FROM CATEGORIES WHERE no_categorie = ?";
 	private static final String GET_ALL = "SELECT * FROM CATEGORIES";
 	private static final String UPDATE = "UPDATE CATEGORIES SET libelle = ? WHERE no_categorie = ?";
@@ -26,7 +26,7 @@ public class CategoriesDal {
 
 
 
-	public static void insert(Categories categorie)  {
+	public  void insert(Categories categorie)  {
 		try(Connection cnx = Utils.getConnection()){
 			PreparedStatement rqt = cnx.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS);
 			rqt.setString(1, categorie.getLibelle());
@@ -36,7 +36,7 @@ public class CategoriesDal {
 		}
 	}
 
-	public static Categories get(int no_categorie)
+	public  Categories get(int no_categorie)
 	{
 		Categories result = null;
 		try(Connection cnx = Utils.getConnection())
@@ -57,7 +57,7 @@ public class CategoriesDal {
 		return result;
 	}
 	
-	public static List<Categories> selectALL()
+	public  List<Categories> selectALL()
 	{
 		List<Categories> categories = new ArrayList<>();
 		try(Connection cnx = Utils.getConnection())
@@ -76,7 +76,7 @@ public class CategoriesDal {
 		}
 		return categories;
 	}
-	public static void update(Categories categorie)
+	public  void update(Categories categorie)
     {
     	try(Connection cnx = Utils.getConnection())
     	{
@@ -88,7 +88,7 @@ public class CategoriesDal {
     		logger.severe("Erreur dans la méthode update(Categories categorie) avec categorie =" + categorie.toString() + " Erreur : " + e.getMessage());
 		}
     }
-	 public static void delete(int no_categorie)
+	 public  void delete(int no_categorie)
 	    {
 	    	try(Connection cnx = Utils.getConnection())
 	    	{

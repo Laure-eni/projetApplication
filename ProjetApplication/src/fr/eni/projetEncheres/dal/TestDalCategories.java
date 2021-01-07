@@ -12,40 +12,40 @@ public class TestDalCategories {
 	CategoriesDal cat1 = new CategoriesDal();
 	
 	Categories c1 = new Categories("Ameublement");
-	CategoriesDal.insert(c1);
+	cat1.insert(c1);
 	Categories c2 = new Categories("Informatique");
-	CategoriesDal.insert(c2);
+	cat1.insert(c2);
 	Categories c3 = new Categories("Jardinage");
-	CategoriesDal.insert(c3);
+	cat1.insert(c3);
 	Categories c4 = new Categories("Vêtements");
-	CategoriesDal.insert(c4);
+	cat1.insert(c4);
 	Categories c5 = new Categories("Electroménager");
-	CategoriesDal.insert(c5);
+	cat1.insert(c5);
 	Categories c6 = new Categories("Livres");
-	CategoriesDal.insert(c6);
+	cat1.insert(c6);
 	Categories c7 = new Categories("Sports");
-	CategoriesDal.insert(c7);
+	cat1.insert(c7);
 	Categories c8 = new Categories("Loisirs créatifs");
-	CategoriesDal.insert(c8);
+	cat1.insert(c8);
 	Categories c9 = new Categories("Jeux");
-	CategoriesDal.insert(c9);
+	cat1.insert(c9);
 	
 	
 	//c8.setLibelle("Loisir créatif");
-	//CategoriesDal.update(c8);
+	//cat1.update(c8);
 	//System.out.println("Article après modification  : " + c8.toString() );
 	
 	
 	
-	//Categories a = CategoriesDal.get(3);
+	//Categories a = cat1.get(3);
 	//System.out.println("Catégorie :  " + a.toString() );
 
 	
 	
-	//CategoriesDal.delete(2);
+	//cat1.delete(2);
 	
 	
-	//List<Categories> categories = CategoriesDal.selectALL();
+	//List<Categories> categories = cat1.selectALL();
 	//System.out.println("\nSélection de toutes les catégories : "  );
 	//afficherCategories(categories);
 	
