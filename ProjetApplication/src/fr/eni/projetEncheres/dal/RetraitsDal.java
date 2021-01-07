@@ -17,7 +17,7 @@ public class RetraitsDal {
     private static final String GET_BY_NO_RETRAIT = "SELECT * FROM RETRAITS WHERE no_retrait = ?";
     private static final String GET_ALL = "SELECT * FROM RETRAITS";
     private static final String UPDATE = "UPDATE RETRAITS SET no_retrait = ?, rue = ?, code_postal = ?, ville = ? WHERE no_retrait = ?";
-    private static final String DELETE = "DELETE RETRAITS WHERE no_retraits = ?";
+    private static final String DELETE = "DELETE RETRAITS WHERE no_retrait = ?";
 
     private static Logger logger = MonLogger.getLogger("ProjetApplication");
 

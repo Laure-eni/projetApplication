@@ -19,7 +19,7 @@ public class UtilisateursDal {
     private static final String GET_BY_NO_UTILISATEUR = "SELECT * FROM UTILISATEURS WHERE no_utilisateur = ?";
     private static final String GET_ALL = "SELECT * FROM UTILISATEURS";
     private static final String UPDATE = "UPDATE UTILISATEURS SET pseudo = ?, nom = ?, prenom = ?, email = ?, rue = ?, code_postal = ?, ville = ?, mot_de_passe = ?, credit = ?, administrateur= ? WHERE no_utilisateur = ?";
-    private static final String DELETE = "DELETE UTILISATEURS WHERE pseudo = ?";
+    private static final String DELETE = "DELETE UTILISATEURS WHERE no_utilisateur = ?";
 
     private static Logger logger = MonLogger.getLogger("ProjetApplication");
 
@@ -103,6 +103,7 @@ public class UtilisateursDal {
 		}
     	return utilisateur;
     }
+    
     
     public static void update(Utilisateurs utilisateur)
     {
