@@ -9,16 +9,20 @@ public class Retraits {
     private String ville;
     
     //constructeur
-    public Retraits(int no_retrait, String rue, String code_postal, String ville) {
+    public Retraits(String rue, String code_postal, String ville) {
 		super();
-		this.no_retrait = no_retrait;
 		this.rue = rue;
 		this.code_postal = code_postal;
 		this.ville = ville;
 	}
     
     
-    //getters and setters
+    public Retraits() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	//getters and setters
 	public int getNo_retrait() {
 		return no_retrait;
 	}
