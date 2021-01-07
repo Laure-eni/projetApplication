@@ -49,8 +49,8 @@ public class utilisateursDalTest {
         
         List<Retraits> resultatRequete= new ArrayList<Retraits>();
         resultatRequete = RetraitsDal.selectALL();
-        for(Retraits user : resultatRequete) {
-        System.out.println(user.getNo_retrait() + " " + user.getCode_postal()+ " " + user.getVille());
+        for(Retraits removal : resultatRequete) {
+        System.out.println(removal.getNo_retrait() + " " + removal.getCode_postal()+ " " + removal.getVille());
        
     }
 	

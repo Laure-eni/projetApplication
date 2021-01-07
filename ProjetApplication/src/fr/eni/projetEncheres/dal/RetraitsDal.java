@@ -78,12 +78,12 @@ public class RetraitsDal {
             
             while(rs.next())
             {
-            	Retraits user = new Retraits();
-            	user.setNo_retrait(rs.getInt("no_retrait"));
-            	user.setRue(rs.getString("rue"));
-            	user.setCode_postal(rs.getString("code_postal"));
-            	user.setVille(rs.getString("ville"));
-            	utilisateur.add(user);
+            	Retraits removal = new Retraits();
+            	removal.setNo_retrait(rs.getInt("no_retrait"));
+            	removal.setRue(rs.getString("rue"));
+            	removal.setCode_postal(rs.getString("code_postal"));
+            	removal.setVille(rs.getString("ville"));
+            	utilisateur.add(removal);
             }
     	} catch (SQLException e) {
 			e.printStackTrace();
