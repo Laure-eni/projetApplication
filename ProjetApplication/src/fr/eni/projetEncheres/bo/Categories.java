@@ -7,9 +7,10 @@ public class Categories {
 	   
 	   
 	   //constucteur
-	   public Categories(int no_categorie, String libelle) {
+	   public Categories() {}
+	   
+	 public Categories( String libelle) {
 		super();
-		this.no_categorie = no_categorie;
 		this.libelle = libelle;
 	 }
 
