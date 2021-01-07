@@ -34,26 +34,31 @@ public class utilisateursDalTest {
     //resultatRequete = UtilisateursDal.selectALL();
     //for(Utilisateurs user : resultatRequete) {
     //System.out.println(user.getNom()+ " " + user.getPrenom());//
+		
+		
+	
+	//UtilisateursDal.delete(1);
         
 		
 												//TESTS RETRAITS
-       // RetraitsDal retrait1 = new RetraitsDal();
+        RetraitsDal retrait1 = new RetraitsDal();
         //RetraitsDal retrait2 = new RetraitsDal();
         
         
-        //Retraits numero1 = new Retraits("rue de la madeleine", "69000", "Lyon" );
-        //RetraitsDal.insert(numero1);
+        Retraits numero1 = new Retraits("rue de la madeleine", "69000", "Lyon" );
+        RetraitsDal.insert(numero1);
 		
        // Retraits numero2 = new Retraits("rue de la ferme", "51500", "Taissy" );
         //RetraitsDal.insert(numero2);
         
-        List<Retraits> resultatRequete= new ArrayList<Retraits>();
-        resultatRequete = RetraitsDal.selectALL();
-        for(Retraits removal : resultatRequete) {
-        System.out.println(removal.getNo_retrait() + " " + removal.getCode_postal()+ " " + removal.getVille());
+       // List<Retraits> resultatRequete= new ArrayList<Retraits>();
+       //resultatRequete = RetraitsDal.selectALL();
+       //for(Retraits removal : resultatRequete) {
+       //System.out.println(removal.getNo_retrait() + " " + removal.getCode_postal()+ " " + removal.getVille());
        
+	//RetraitsDal.delete(1);
     }
 	
 	
 	}
-}
+//}
