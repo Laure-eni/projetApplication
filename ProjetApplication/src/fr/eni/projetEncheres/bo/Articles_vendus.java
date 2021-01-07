@@ -2,6 +2,7 @@ package fr.eni.projetEncheres.bo;
 
 import java.time.LocalDate;
 
+
 public class Articles_vendus {
 
 	private int no_article;                 
@@ -16,12 +17,12 @@ public class Articles_vendus {
     private int no_retrait;		
 
     //Constructeur
-    public Articles_vendus(int no_article, String nom_article, String description, LocalDate date_debut_encheres,
+    public Articles_vendus( String nom_article, String description, LocalDate date_debut_encheres,
 			LocalDate date_fin_encheres, int prix_initial, int prix_vente, int no_vendeur, int no_categorie,
 			int no_retrait) 
     {
 		super();
-		this.no_article = no_article;
+		
 		this.nom_article = nom_article;
 		this.description = description;
 		this.date_debut_encheres = date_debut_encheres;
@@ -32,14 +33,11 @@ public class Articles_vendus {
 		this.no_categorie = no_categorie;
 		this.no_retrait = no_retrait;
 	}
+    public Articles_vendus() {
+		super();
+	}
     
-    //Getters ands Setters
-	public int getNo_article() {
-		return no_article;
-	}
-	public void setNo_article(int no_article) {
-		this.no_article = no_article;
-	}
+    
 	public String getNom_article() {
 		return nom_article;
 	}
