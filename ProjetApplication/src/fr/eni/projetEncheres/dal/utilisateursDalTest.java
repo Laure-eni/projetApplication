@@ -15,7 +15,7 @@ import fr.eni.projetEncheres.dal.RetraitsDal;
 public class utilisateursDalTest {
 
 	public static void main(String[] args) throws IOException {
-		
+		//normalement ça marche
 											// TESTS UTILISTEURS
 	UtilisateursDal u1 = new UtilisateursDal();
 	//UtilisateursDal utilisateur1 = new UtilisateursDal();
