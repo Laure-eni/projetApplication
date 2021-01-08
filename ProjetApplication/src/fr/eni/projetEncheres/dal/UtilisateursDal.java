@@ -18,6 +18,7 @@ import utils.MonLogger;
 public class UtilisateursDal {
 	private static final String INSERT = "INSERT INTO UTILISATEURS(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur ) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
     private static final String GET_BY_NO_UTILISATEUR = "SELECT * FROM UTILISATEURS WHERE no_utilisateur = ?";
+    private static final String GET_BY_PSEUDO = "SELECT * FROM UTILISATEURS WHERE pseudo =?";
     private static final String GET_ALL = "SELECT * FROM UTILISATEURS";
     private static final String UPDATE = "UPDATE UTILISATEURS SET pseudo = ?, nom = ?, prenom = ?, email = ?, telephone=?, rue = ?, code_postal = ?, ville = ?, mot_de_passe = ?, credit = ?, administrateur= ? WHERE no_utilisateur = ?";
     private static final String DELETE = "DELETE UTILISATEURS WHERE no_utilisateur = ?";
@@ -66,6 +67,38 @@ public class UtilisateursDal {
     	{
     		PreparedStatement rqt = cnx.prepareStatement(GET_BY_NO_UTILISATEUR);
     		rqt.setInt(1, no_utilisateur);
+    		ResultSet rs = rqt.executeQuery();
+    		
+    		if(rs.next())
+    		{
+    			result = new Utilisateurs();
+    			result.setNo_utilisateur(rs.getInt("no_utilisateur"));
+    			result.setPseudo(rs.getString("pseudo"));
+    			result.setNom(rs.getString("nom"));
+    			result.setPrenom(rs.getString("prenom"));
+    			result.setEmail(rs.getString("email"));
+    			result.setTelephone(rs.getString("telephone"));
+    			result.setRue(rs.getString("rue"));
+    			result.setCode_postal(rs.getString("code_postal"));
+    			result.setVille(rs.getString("ville"));
+    			result.setMot_de_passe(rs.getString("mot_de_passe"));
+    			result.setCredit(rs.getInt("credit"));
+    			result.setAdministrateur(rs.getInt("administrateur"));
+    		}
+    	} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	
+    	return result;
+    }
+    
+    public Utilisateurs get(String pseudo)
+    {
+    	Utilisateurs result = null;
+    	try(Connection cnx = Utils.getConnection())
+    	{
+    		PreparedStatement rqt = cnx.prepareStatement(GET_BY_PSEUDO);
+    		rqt.setString(1, pseudo);
     		ResultSet rs = rqt.executeQuery();
     		
     		if(rs.next())
