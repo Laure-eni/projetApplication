@@ -31,9 +31,20 @@ public class CategoriesDal {
 			PreparedStatement rqt = cnx.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS);
 			rqt.setString(1, categorie.getLibelle());
 			rqt.executeUpdate();
+			
+			int nbRows = rqt.executeUpdate();
+			if (nbRows == 1) {
+				ResultSet rs = rqt.getGeneratedKeys();
+				if (rs.next()) {
+					categorie.setNo_categorie(rs.getInt(1));
+				}
+			}
 		} catch (Exception ex) {
 			logger.severe("Erreur dans la méthode insert(Categories categorie) avec categorie =" + categorie.toString() + " Erreur : " + ex.getMessage());
 		}
+		
+
+		
 	}
 
 	public  Categories get(int no_categorie)
