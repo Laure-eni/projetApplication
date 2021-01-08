@@ -23,7 +23,7 @@ public class CategoriesDal {
 
 	private static Logger logger = MonLogger.getLogger("ProjetApplication");
 
-
+//test
 
 
 	public  void insert(Categories categorie)  {
