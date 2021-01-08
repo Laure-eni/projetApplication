@@ -17,12 +17,13 @@ public class utilisateursDalTest {
 	public static void main(String[] args) throws IOException {
 		
 											// TESTS UTILISTEURS
-	//UtilisateursDal utilisateur1 = new UtilisateursDal();
+		UtilisateursDal u1 = new UtilisateursDal();
+	UtilisateursDal utilisateur1 = new UtilisateursDal();
 	//UtilisateursDal utilisateur2 = new UtilisateursDal();
 	//UtilisateursDal utilisateur3 = new UtilisateursDal();
 		
-	//Utilisateurs JeanPaul = new Utilisateurs("JP", "Jean-Paul", "Dupont", "jp@gmail.com",  "0650852520", "rue Dupuis", "54000", "Nancy", "1234", 50, 0);
-	//UtilisateursDal.insert(JeanPaul);
+	Utilisateurs JeanPaul = new Utilisateurs("JP", "Jean-Paul", "Dupont", "jp@gmail.com",  "0650852520", "rue Dupuis", "54000", "Nancy", "1234", 50, 0);
+	u1.insert(JeanPaul);
 
 	//Utilisateurs Adrian = new Utilisateurs("LeSauveur", "Adrian", "Lepage", "adrian@gmail.com",  "0650852530", "rue des super héros", "10000", "Gotham", "1234", 50, 0);
 	//UtilisateursDal.insert(Adrian);
@@ -35,18 +36,18 @@ public class utilisateursDalTest {
     //for(Utilisateurs user : resultatRequete) {
     //System.out.println(user.getNom()+ " " + user.getPrenom());//
 		
-		
+	
 	
 	//UtilisateursDal.delete(1);
         
 		
 												//TESTS RETRAITS
-        RetraitsDal retrait1 = new RetraitsDal();
+       // RetraitsDal retrait1 = new RetraitsDal();
         //RetraitsDal retrait2 = new RetraitsDal();
         
         
-        Retraits numero1 = new Retraits("rue de la madeleine", "69000", "Lyon" );
-        RetraitsDal.insert(numero1);
+      //  Retraits numero1 = new Retraits("rue de la madeleine", "69000", "Lyon" );
+       // RetraitsDal.insert(numero1);
 		
        // Retraits numero2 = new Retraits("rue de la ferme", "51500", "Taissy" );
         //RetraitsDal.insert(numero2);

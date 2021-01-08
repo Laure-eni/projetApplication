@@ -26,7 +26,7 @@ public class UtilisateursDal {
     public UtilisateursDal() throws IOException {
     }
 
-    public static void insert(Utilisateurs utilisateur)
+    public void insert(Utilisateurs utilisateur)
     {
     	try(Connection cnx = Utils.getConnection())
     	{
@@ -51,7 +51,7 @@ public class UtilisateursDal {
     	
     }
     
-    public static Utilisateurs get(int no_utilisateur)
+    public Utilisateurs get(int no_utilisateur)
     {
     	Utilisateurs result = null;
     	try(Connection cnx = Utils.getConnection())
@@ -82,7 +82,7 @@ public class UtilisateursDal {
     	return result;
     }
     
-    public static List<Utilisateurs> selectALL()
+    public List<Utilisateurs> selectALL()
     
     {
     	List<Utilisateurs> utilisateur = new ArrayList<>();
@@ -105,7 +105,7 @@ public class UtilisateursDal {
     }
     
     
-    public static void update(Utilisateurs utilisateur)
+    public void update(Utilisateurs utilisateur)
     {
     	try(Connection cnx = Utils.getConnection())
     	{
@@ -129,7 +129,7 @@ public class UtilisateursDal {
 		}
     }
     
-    public static void delete(int no_utilisateur)
+    public void delete(int no_utilisateur)
     {
     	try(Connection cnx = Utils.getConnection())
     	{

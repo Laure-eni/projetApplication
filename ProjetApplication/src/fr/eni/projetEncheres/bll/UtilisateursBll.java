@@ -1,5 +1,6 @@
 package fr.eni.projetEncheres.bll;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -11,8 +12,11 @@ public class UtilisateursBll {
 	
 	private static Logger logger = MonLogger.getLogger("UtilisateursBll");
 	
-	public static void insert(Utilisateurs utilisateur) throws Exception
+	public void insert(Utilisateurs utilisateur) throws Exception
 	{
+		
+		UtilisateursDal u1 = new UtilisateursDal();
+		
 		if(utilisateur.getPseudo().trim().equals(""))
 		{
 			throw new Exception("Pseudo incorrect");
@@ -22,29 +26,42 @@ public class UtilisateursBll {
 			throw new Exception("Email incorrect");
 		}
 		
-		UtilisateursDal.insert(utilisateur);
+		u1.insert(utilisateur);
 	}
 	
-	public static Utilisateurs get(int no_utilisateur) {
-		return UtilisateursDal.get(no_utilisateur);
+	public Utilisateurs get(int no_utilisateur) throws Exception {
+		
+		UtilisateursDal u1 = new UtilisateursDal();
+		 if(no_utilisateur <= 0)
+	        {
+	            throw new Exception("n° utilisateur incorrect");
+	        }
+		return u1.get(no_utilisateur);
+	        
 		
 	}
+		 
 	
-	public static List<Utilisateurs> SelectALL() {
-		return UtilisateursDal.selectALL();
+	public List<Utilisateurs> SelectALL() throws IOException {
+		
+		UtilisateursDal u1 = new UtilisateursDal();
+		return u1.selectALL();
 	}
 	
-	public static void update(Utilisateurs utilisateur) {
-		UtilisateursDal.update(utilisateur);
+	public void update(Utilisateurs utilisateur) throws IOException {
+		UtilisateursDal u1 = new UtilisateursDal();
+		u1.update(utilisateur);
 			
 	}
 	
-	public static void delete(int no_utilisateur) throws Exception {
+	public void delete(int no_utilisateur) throws Exception {
+		UtilisateursDal u1 = new UtilisateursDal();
+		
         if(no_utilisateur <= 0)
         {
             throw new Exception("n° utilisateur incorrect");
         }
-        UtilisateursDal.delete(no_utilisateur);
+        u1.delete(no_utilisateur);
 	}
 
 
