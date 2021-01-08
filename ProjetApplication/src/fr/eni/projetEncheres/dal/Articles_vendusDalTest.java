@@ -23,7 +23,7 @@ public class Articles_vendusDalTest {
 //		LocalDate date = LocalDate.of(2020, Month.JANUARY, 8);
 //		LocalDate date2 = LocalDate.of(2021, Month.JANUARY, 9);
 		Articles_vendus voiture = new Articles_vendus("voiture", "petite voiture jouet", date, date, 15, 10, 2, 3);
-		Articles_vendusdal.insert(voiture);
+		article1.insert(voiture);
 
 		//Utilisateurs Adrian = new Utilisateurs("LeSauveur", "Adrian", "Lepage", "adrian@gmail.com",  "0650852530", "rue des super héros", "10000", "Gotham", "1234", 50, 0);
 		//UtilisateursDal.insert(Adrian);
