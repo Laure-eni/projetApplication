@@ -44,7 +44,7 @@ public class UtilisateursDal {
     		rqt.setInt(10, utilisateur.getCredit());
     		rqt.setInt(11, utilisateur.getAdministrateur());
     		
-    		
+    		//help
     		int nbRows = rqt.executeUpdate();
 			if (nbRows == 1) {
 				ResultSet rs = rqt.getGeneratedKeys();
