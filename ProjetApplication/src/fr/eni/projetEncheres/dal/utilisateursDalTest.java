@@ -15,15 +15,24 @@ import fr.eni.projetEncheres.dal.RetraitsDal;
 public class utilisateursDalTest {
 
 	public static void main(String[] args) throws IOException {
-		
+		//normalement ça marche
 											// TESTS UTILISTEURS
-		UtilisateursDal u1 = new UtilisateursDal();
-	UtilisateursDal utilisateur1 = new UtilisateursDal();
+	UtilisateursDal u1 = new UtilisateursDal();
+	//UtilisateursDal utilisateur1 = new UtilisateursDal();
 	//UtilisateursDal utilisateur2 = new UtilisateursDal();
 	//UtilisateursDal utilisateur3 = new UtilisateursDal();
 		
-	Utilisateurs JeanPaul = new Utilisateurs("JP", "Jean-Paul", "Dupont", "jp@gmail.com",  "0650852520", "rue Dupuis", "54000", "Nancy", "1234", 50, 0);
-	u1.insert(JeanPaul);
+	//Utilisateurs JeanPaul = new Utilisateurs("JP", "Dupont", "Jean Paul", "jp@gmail.com",  "0650852520", "rue Dupuis", "54000", "Nancy", "1234", 50, 0);
+	//u1.insert(JeanPaul);
+	
+	//Utilisateurs Marianne = new Utilisateurs("titi", "Malherbe", "Marianne", "co@gmail.com",  "0750852520", "rue de la Grèce", "54000", "Nancy", "1234", 50, 0);
+	//u1.insert(Marianne);
+	
+		Utilisateurs a = u1.get(4);
+		a.setTelephone("0665588901");
+		u1.update(a);
+		System.out.println("Prenom après modification  : " + u1.toString() );
+
 
 	//Utilisateurs Adrian = new Utilisateurs("LeSauveur", "Adrian", "Lepage", "adrian@gmail.com",  "0650852530", "rue des super héros", "10000", "Gotham", "1234", 50, 0);
 	//UtilisateursDal.insert(Adrian);
@@ -34,11 +43,14 @@ public class utilisateursDalTest {
 	//List<Utilisateurs> resultatRequete= new ArrayList<Utilisateurs>();
     //resultatRequete = UtilisateursDal.selectALL();
     //for(Utilisateurs user : resultatRequete) {
-    //System.out.println(user.getNom()+ " " + user.getPrenom());//
+    //System.out.println(user.getNom()+ " " + user.getPrenom());
+		
+	//Utilisateurs u = u1.get(8);
+	//System.out.println("Catégorie :  " + u.toString() );
 		
 	
 	
-	//UtilisateursDal.delete(1);
+	//u1.delete(6);
         
 		
 												//TESTS RETRAITS

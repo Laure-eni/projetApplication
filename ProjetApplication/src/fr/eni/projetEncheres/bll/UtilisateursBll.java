@@ -37,9 +37,23 @@ public class UtilisateursBll {
 	            throw new Exception("n° utilisateur incorrect");
 	        }
 		return u1.get(no_utilisateur);
-	        
-		
+	        		
 	}
+	
+	public Utilisateurs get(String pseudo) throws Exception {
+		
+		UtilisateursDal u1 = new UtilisateursDal();
+		 if(pseudo.isEmpty())
+	        {
+	            throw new Exception("pseudo incorrect");
+	        }
+		 if(pseudo.equals(""))
+		 {
+			 throw new Exception("pseudo déjà prit");
+		 }
+		return u1.get(pseudo);
+		
+}
 		 
 	
 	public List<Utilisateurs> SelectALL() throws IOException {
