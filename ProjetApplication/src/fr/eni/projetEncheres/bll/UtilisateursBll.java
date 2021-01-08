@@ -40,7 +40,7 @@ public class UtilisateursBll {
 	        		
 	}
 	
-public Utilisateurs get(String pseudo) throws Exception {
+	public Utilisateurs get(String pseudo) throws Exception {
 		
 		UtilisateursDal u1 = new UtilisateursDal();
 		 if(pseudo.isEmpty())
