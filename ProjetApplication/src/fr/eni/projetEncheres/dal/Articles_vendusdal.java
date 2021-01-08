@@ -20,7 +20,7 @@ import java.sql.Date;
 
 public class Articles_vendusdal {
 	
-	
+	//test
 
 
 	Date date = Date.valueOf(LocalDate.now());
