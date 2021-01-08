@@ -6,7 +6,7 @@ import fr.eni.projetEncheres.bo.Articles_vendus;
 import fr.eni.projetEncheres.dal.Articles_vendusdal;
 import utils.MonLogger;
 
-//testcomit.
+
 public class Articles_vendusBll {
 	
 private static Logger logger = MonLogger.getLogger("UtilisateursBll");

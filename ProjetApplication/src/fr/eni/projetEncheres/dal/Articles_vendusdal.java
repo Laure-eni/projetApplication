@@ -36,7 +36,7 @@ public class Articles_vendusdal {
     public Articles_vendusdal() throws IOException {
     }
 
-    public static void insert(Articles_vendus article_vendu)
+    public void insert(Articles_vendus article_vendu)
     {
     	try(Connection cnx = Utils.getConnection())
     	{
@@ -58,7 +58,7 @@ public class Articles_vendusdal {
 		}	
     	
     }
-    public static Articles_vendus get(int no_article)
+    public Articles_vendus get(int no_article)
     
     {
     	Articles_vendus result = null;
@@ -88,7 +88,7 @@ public class Articles_vendusdal {
     	
     	return result;
 }
- public static List<Articles_vendus> selectALL()
+ public List<Articles_vendus> selectALL()
     
     {
     	List<Articles_vendus> article_vendu = new ArrayList<>();
