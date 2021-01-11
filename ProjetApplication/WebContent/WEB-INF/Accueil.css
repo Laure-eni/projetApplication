@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+h1
+	{
+
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    letter-spacing: 3px;
+	font-family:inherit ;
+
+	}
+	
+
