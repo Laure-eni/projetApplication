@@ -10,6 +10,7 @@
 </head>
 <body>
 
+				//Ajouter le pseudo/email unique
  <div id="modal-dialog-form" class="dialog-form" title="Mon compte">
             <h2>Mon inscription</h2>
             <form name="form_compte" action="" method="get">
