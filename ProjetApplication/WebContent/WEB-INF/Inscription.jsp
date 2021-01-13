@@ -6,15 +6,18 @@
 <meta charset="UTF-8">
 <title>Inscription</title>
 <style type = "text/css">
-<%@include file = "Connexion.css"%></style>
+<%@include file = "Inscription.css"%></style>
 </head>
 <body>
 
 				//Ajouter le pseudo/email unique
  <div id="modal-dialog-form" class="dialog-form" title="Mon compte">
-            <h2>Mon inscription</h2>
+ 
+ 
+         <img class="img" src="https://fontmeme.com/permalink/210112/fe36ca54d5d57997e31b828b540fcfde.png" alt="script-fonts" border="0">
+            
             <form name="form_compte" action="" method="get">
-                <div class="form-message">Vos informations personnelles</div>
+                <br><div class="form-message">Vos informations personnelles</div>
                 <br/>
                     <div class="form-label">
                         <label for="fld-pseudo">Pseudo : </label>
